@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      4. ОБРАБОТКА МЕССЕНДЖЕРА МАКС (КОПИРОВАНИЕ ТЕЛЕФОНА И ПЕРЕХОД)
      ========================================================================== */
-  const MAX_PROFILE_URL = 'https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno';
+  const MAX_PROFILE_URL = 'https://max.ru/u/f9LHodD0cOLxJzj63nASr6si_iYuyGz2HY-qIaEtjhyqRDN6lv5kBx9fHdI';
   const PHONE_NUMBER = '+79512605911';
 
   function copyToClipboard(text) {
