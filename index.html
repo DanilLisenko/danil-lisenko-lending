@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Данил Лисенко — Репетитор по информатике и математике в Челябинске и онлайн</title>
+  <meta name="description" content="Индивидуальные занятия по информатике, математике и программированию (Python, веб-разработка, ОГЭ). Репетитор Данил Сергеевич Лисенко — бакалавр ЮУрГУ ФИИТ, инженер-программист, экс-преподаватель Компьютерной Академии TOP.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#1e293b">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Данил Лисенко — Репетитор по информатике и математике | Онлайн и Челябинск">
+  <meta property="og:description" content="Подготовка к ОГЭ, программирование на Python, школьная программа. Пробный урок 600 ₽. Индивидуальный подход без стресса.">
+  <meta property="og:image" content="images/danil-portrait.jpg">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ВЕРХНЯЯ ШАПКА САЙТА (HEADER)
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="logo-wrapper">
+        <img src="images/logo.svg" alt="Логотип Данил Лисенко" class="site-logo-img" width="42" height="42">
+        <div class="logo-text">
+          <span class="logo-name">Данил Лисенко</span>
+          <span class="logo-sub">Информатика • Математика • IT</span>
+        </div>
+      </a>
+
+      <!-- Основная навигация -->
+      <nav class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#programs">Направления</a></li>
+          <li><a href="#formats">Формат</a></li>
+          <li><a href="#education">Дипломы</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#pricing">Цены</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Быстрые действия: мессенджеры и кнопка записи -->
+      <div class="header-actions">
+        <div class="header-messengers">
+          <!-- Telegram -->
+          <a href="https://t.me/Daaniiiiillll" target="_blank" rel="noopener noreferrer" class="icon-btn-messenger tg" title="Telegram @Daaniiiiillll" data-messenger="tg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .31z"/>
+            </svg>
+          </a>
+          <!-- Макс -->
+          <a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" target="_blank" rel="noopener noreferrer" class="icon-btn-messenger max" title="Мессенджер Макс" data-messenger="max">
+            <img src="images/Max_logo_2025.png" alt="Макс" class="max-icon-img">
+          </a>
+          <!-- VK -->
+          <a href="https://vk.com/fucupls" target="_blank" rel="noopener noreferrer" class="icon-btn-messenger vk" title="VK @fucupls" data-messenger="vk">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91c-.48.68-1.32.96-2.07.96-.54 0-1.05-.16-1.56-.47-.56-.34-.95-.82-1.29-1.27-.2-.26-.37-.48-.56-.48-.12 0-.25.07-.38.25-.33.48-.48 1.13-.57 1.48-.04.18-.17.33-.35.33h-1.63c-.22 0-.41-.12-.48-.31-.77-2.07-2.11-4.73-4.25-6.28-.2-.14-.26-.38-.15-.59.1-.2.31-.32.54-.32h1.8c.2 0 .37.11.45.29.58 1.34 1.39 2.92 2.15 3.39.18.11.31.06.39-.06.2-.32.22-1.74.22-2.3 0-.69-.14-.99-.54-1.08-.18-.04-.29-.2-.25-.38.05-.2.24-.34.45-.34h2.51c.25 0 .45.19.46.44l.05 2.82c.01.22.1.34.2.34.08 0 .18-.08.31-.24.78-1.02 1.48-2.61 1.55-2.82.07-.2.26-.34.48-.34h1.9c.24 0 .43.15.48.38.06.27-.1 1.05-1.26 2.51-.43.54-.66.86-.66 1.1 0 .21.17.47.53.86.89.97 1.44 1.7 1.51 2.21.04.25-.09.5-.32.65z"/>
+            </svg>
+          </a>
+        </div>
+        <button class="btn-primary" data-open-modal>Записаться на урок</button>
+        <button class="burger-btn" id="burgerBtn" aria-label="Открыть мобильное меню">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         ГЛАВНЫЙ ЭКРАН (HERO)
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content fade-in-on-scroll">
+          <div class="tag-badge">
+            <span class="badge-dot"></span>
+            Онлайн по всей РФ • Выезд в Челябинске • 10:00–22:00
+          </div>
+
+          <h1 class="hero-title">
+            Понятная информатика, программирование и математика <span class="highlight">без стресса и зубрежки</span>
+          </h1>
+
+          <p class="hero-description">
+            Здравствуйте! Меня зовут <strong>Данил Сергеевич Лисенко</strong>. Я действующий инженер-программист, выпускник ЮУрГУ и преподаватель с 2+ годами опыта. Помогаю сдать ОГЭ на максимальный балл, освоить Python с нуля и полюбить точные науки.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-primary" data-open-modal data-service-type="Пробный вводный урок (600 ₽)">
+              <span>Записаться на пробный урок — 600 ₽</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#about" class="btn-secondary">Узнать обо мне</a>
+          </div>
+
+          <!-- Мгновенная связь в мессенджерах -->
+          <div class="hero-messengers-instant">
+            <div class="hero-messengers-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Быстро написать в мессенджер без звонков:
+            </div>
+            <div class="messengers-quick-row">
+              <a href="https://t.me/Daaniiiiillll" class="quick-msg-link tg" data-messenger="tg" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .31z"/></svg>
+                Telegram (@Daaniiiiillll)
+              </a>
+              <a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" class="quick-msg-link max" data-messenger="max" target="_blank" rel="noopener">
+                <img src="images/Max_logo_2025.png" alt="Макс" class="max-icon-img">
+                Макс
+              </a>
+              <a href="https://vk.com/fucupls" class="quick-msg-link vk" data-messenger="vk" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24"><path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91c-.48.68-1.32.96-2.07.96-.54 0-1.05-.16-1.56-.47-.56-.34-.95-.82-1.29-1.27-.2-.26-.37-.48-.56-.48-.12 0-.25.07-.38.25-.33.48-.48 1.13-.57 1.48-.04.18-.17.33-.35.33h-1.63c-.22 0-.41-.12-.48-.31-.77-2.07-2.11-4.73-4.25-6.28-.2-.14-.26-.38-.15-.59.1-.2.31-.32.54-.32h1.8c.2 0 .37.11.45.29.58 1.34 1.39 2.92 2.15 3.39.18.11.31.06.39-.06.2-.32.22-1.74.22-2.3 0-.69-.14-.99-.54-1.08-.18-.04-.29-.2-.25-.38.05-.2.24-.34.45-.34h2.51c.25 0 .45.19.46.44l.05 2.82c.01.22.1.34.2.34.08 0 .18-.08.31-.24.78-1.02 1.48-2.61 1.55-2.82.07-.2.26-.34.48-.34h1.9c.24 0 .43.15.48.38.06.27-.1 1.05-1.26 2.51-.43.54-.66.86-.66 1.1 0 .21.17.47.53.86.89.97 1.44 1.7 1.51 2.21.04.25-.09.5-.32.65z"/></svg>
+                VK (@fucupls)
+              </a>
+            </div>
+          </div>
+
+          <!-- Метрики доверия -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">&gt; 2 лет</span>
+              <span class="stat-label">репетиторской практики</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1 200 ₽</span>
+              <span class="stat-label">1 час (пробный — 600 ₽)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">ЮУрГУ</span>
+              <span class="stat-label">диплом бакалавра ФИИТ</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50 / 50</span>
+              <span class="stat-label">поэтапная оплата занятия</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Фотография преподавателя и плавающие карточки -->
+        <div class="hero-image-col fade-in-on-scroll delay-1">
+          <div class="hero-card-frame">
+            <div class="floating-badge badge-top">
+              <div class="badge-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="badge-text-title">Инженер-программист</div>
+                <div class="badge-text-sub">Практика реальной разработки</div>
+              </div>
+            </div>
+
+            <div class="hero-image-wrap">
+              <img src="images/danil-hero.jpg" alt="Репетитор по информатике и математике Данил Лисенко" loading="eager">
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <div class="badge-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="badge-text-title">Экс-педагог Академии TOP</div>
+                <div class="badge-text-sub">Опыт работы с детьми 7–16 лет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         МАНИФЕСТ / ЦИТАТА
+         ========================================================================== -->
+    <section class="manifesto-section">
+      <div class="container">
+        <div class="manifesto-card fade-in-on-scroll">
+          <div class="manifesto-icon">💡</div>
+          <p class="manifesto-quote">
+            «Моя главная задача — не заставлять заучивать шаблонные алгоритмы, а научить думать, анализировать и понимать суть вещей. Когда ученик видит логику в математике или собирает работающую программу на Python своими руками, страх перед предметом сменяется неподдельным интересом.»
+          </p>
+          <div class="manifesto-author">
+            <span class="manifesto-name">Данил Сергеевич Лисенко</span>
+            <span class="manifesto-dot">•</span>
+            <span class="manifesto-role">Преподаватель информатики и математики, инженер-программист</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ОБО МНЕ (ABOUT SECTION)
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-gallery fade-in-on-scroll">
+            <div class="about-photo-card main-photo">
+              <img src="images/danil-classroom.jpg" alt="Данил Лисенко ведет занятия в компьютерном классе Академии TOP" loading="lazy">
+              <div class="photo-caption">
+                <span class="caption-tag">Компьютерная Академия TOP</span>
+                <span class="caption-text">Обучение школьников программированию и IT</span>
+              </div>
+            </div>
+
+            <div class="about-photo-card tv-photo">
+              <img src="images/danil-tv.jpg" alt="Данил Лисенко — сюжет на телеканале Первое областное" loading="lazy">
+              <div class="photo-caption">
+                <span class="caption-tag">Телеканал «Первое областное»</span>
+                <span class="caption-text">Эксперт и преподаватель Академии</span>
+              </div>
+            </div>
+
+            <div class="about-experience-badge">
+              <div class="exp-num">&gt; 2 лет</div>
+              <div class="exp-label">успешной репетиторской практики</div>
+            </div>
+          </div>
+
+          <div class="about-content fade-in-on-scroll delay-1">
+            <div class="tag-badge">Знакомство</div>
+            <h2 class="section-title">Обо мне и моем подходе к преподаванию</h2>
+            
+            <p class="about-bio-lead">
+              Приветствую! Меня зовут <strong>Лисенко Данил Сергеевич</strong>. Я окончил Южно-Уральский государственный университет (ЮУрГУ) по направлению <strong>«Фундаментальная информатика и информационные технологии»</strong> (квалификация — бакалавр, программа «Информатика и компьютерные науки»).
+            </p>
+
+            <p class="about-text">
+              Параллельно с репетиторством я работаю <strong>инженером-программистом</strong> в IT-сфере. Это значит, что я обучаю не устаревшим догмам из учебников двадцатилетней давности, а современным стандартам программирования, алгоритмическому мышлению и практическим инструментам, востребованным в реальном мире.
+            </p>
+
+            <p class="about-text">
+              С мая 2024 по январь 2025 года работал преподавателем в <strong>Компьютерной академии TOP</strong>, где вел очные групповые занятия по программированию, геймдеву и 3D для детей и подростков 7–16 лет. С лета 2024 года активно веду частную репетиторскую практику: успешно готовил выпускников 9 классов к ОГЭ по информатике и математике, а также подтягивал успеваемость школьников 5–8 классов.
+            </p>
+
+            <div class="about-mini-cards-grid">
+              <div class="about-mini-card">
+                <div class="mini-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <div class="mini-card-title">Просто о сложном</div>
+                <div class="mini-card-desc">Объясняю на жизненных примерах и аналогиях, без заумной терминологии.</div>
+              </div>
+
+              <div class="about-mini-card">
+                <div class="mini-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                </div>
+                <div class="mini-card-title">80% практики</div>
+                <div class="mini-card-desc">Ученик сам пишет код, разбирает алгоритмы и решает задачи прямо на уроке.</div>
+              </div>
+
+              <div class="about-mini-card">
+                <div class="mini-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div class="mini-card-title">Поддержка и комфорт</div>
+                <div class="mini-card-desc">Никакого давления и критики. Спокойно объясню столько раз, сколько потребуется.</div>
+              </div>
+
+              <div class="about-mini-card">
+                <div class="mini-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <div class="mini-card-title">IT-навыки будущего</div>
+                <div class="mini-card-desc">От школьных экзаменов до Python, разработки сайтов, 3D и нейросетей.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ДЛЯ КОГО ЗАНЯТИЯ (TARGET AUDIENCE)
+         ========================================================================== -->
+    <section class="audience-section" id="audience">
+      <div class="container">
+        <div class="section-head fade-in-on-scroll">
+          <div class="tag-badge">Кому подойдут занятия</div>
+          <h2 class="section-title">Индивидуальная программа под ваши цели</h2>
+          <p class="section-subtitle">Работаю со школьниками любого уровня подготовки — от устранения двоек до побед на олимпиадах и первых IT-проектов.</p>
+        </div>
+
+        <div class="audience-grid">
+          <!-- Карточка 1 -->
+          <div class="audience-card fade-in-on-scroll">
+            <div class="audience-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="audience-title">Школьники 5–8 классов</h3>
+            <p class="audience-text">Устраняем пробелы по школьной программе математики и информатики, возвращаем уверенность у доски и повышаем оценки до четверок и пятерок.</p>
+            <ul class="audience-list">
+              <li>Понятное объяснение дробей, уравнений, геометрии</li>
+              <li>Информатика: логика, системы счисления, алгоритмы</li>
+              <li>Помощь с домашними заданиями и контрольными</li>
+              <li>Снятие страха перед строгими школьными учителями</li>
+            </ul>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="audience-card featured fade-in-on-scroll delay-1">
+            <span class="audience-badge-pill">Высокий спрос</span>
+            <div class="audience-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="audience-title">Выпускники 9 классов (ОГЭ)</h3>
+            <p class="audience-text">Системная экспресс- или годовая подготовка к ОГЭ по информатике и математике с гарантией уверенной сдачи на 4 и 5.</p>
+            <ul class="audience-list">
+              <li>Разбор структуры КИМ и критериев проверки ФИПИ</li>
+              <li>Информатика: задания 1–10 (теория) + 11–15 (Python, Excel, Кумир)</li>
+              <li>Математика: реальная геометрия, уравнения, задачи 1–5</li>
+              <li>Регулярные пробники на бланках с замером прогресса</li>
+            </ul>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="audience-card fade-in-on-scroll delay-2">
+            <div class="audience-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="audience-title">Юные разработчики (7–16 лет)</h3>
+            <p class="audience-text">Настоящее программирование вместо бессмысленного залипания в телефон. Создаем игры, сайты и развиваем системное мышление.</p>
+            <ul class="audience-list">
+              <li>Основы Python: переменные, условия, циклы, функции</li>
+              <li>Разработка 2D-игр на Pygame и ботов для Telegram</li>
+              <li>Создание своих первых сайтов (HTML, CSS, JS)</li>
+              <li>3D-моделирование, Photoshop и знакомство с нейросетями</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ПРОГРАММЫ И НАПРАВЛЕНИЯ (PROGRAMS)
+         ========================================================================== -->
+    <section class="programs-section" id="programs">
+      <div class="container">
+        <div class="section-head fade-in-on-scroll">
+          <div class="tag-badge">Обучающие курсы</div>
+          <h2 class="section-title">Направления и программы обучения</h2>
+          <p class="section-subtitle">Программа каждого курса адаптируется под начальный уровень ученика и желаемую скорость обучения.</p>
+        </div>
+
+        <div class="programs-grid">
+          <!-- Программа 1: Подготовка к ОГЭ по информатике -->
+          <div class="program-card fade-in-on-scroll">
+            <div class="program-card-header">
+              <span class="program-code">01 / ЭКЗАМЕНЫ</span>
+              <h3 class="program-title">Подготовка к ОГЭ и ЕГЭ по информатике</h3>
+            </div>
+            <p class="program-desc">
+              Системная подготовка к ОГЭ и ЕГЭ (ФИПИ). Теоретическая база + углубленная практическая часть (программирование на Python, электронные таблицы Excel, алгоритмы, базы данных).
+            </p>
+            <ul class="program-topics">
+              <li>Количественные параметры инфообъектов, графы, кодирование</li>
+              <li>Поисковые запросы, алгебра логики, базы данных</li>
+              <li>Задание 13.1 (Презентация) и 13.2 (Форматирование текста)</li>
+              <li>Задание 14 (Анализ данных в электронных таблицах)</li>
+              <li>Задание 15 (Программирование на Python или робот Кумир)</li>
+            </ul>
+            <div class="program-footer">
+              <span class="program-price">1 200 ₽ / час</span>
+              <button class="btn-card-action" data-open-modal data-service-type="Подготовка к ОГЭ по информатике">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Программа 2: Подготовка к ОГЭ и математика -->
+          <div class="program-card fade-in-on-scroll delay-1">
+            <div class="program-card-header">
+              <span class="program-code">02 / ЭКЗАМЕНЫ & ШКОЛА</span>
+              <h3 class="program-title">ОГЭ, ЕГЭ и школьная математика</h3>
+            </div>
+            <p class="program-desc">
+              Разбор алгебры и геометрии для 5–11 классов. Ликвидация пробелов, подготовка к контрольным, ВПР и системное прорешивание прототипов экзаменов ОГЭ и ЕГЭ.
+            </p>
+            <ul class="program-topics">
+              <li>Практические задачи блоков 1–5 (шины, печи, квартиры, планы)</li>
+              <li>Алгебра: дроби, степени, корни, линейные и квадратные уравнения</li>
+              <li>Геометрия: треугольники, четырехугольники, окружности, площади</li>
+              <li>Графики функций и основы теории вероятностей</li>
+              <li>Разбор сложных задач второй части (№20, №21, №23)</li>
+            </ul>
+            <div class="program-footer">
+              <span class="program-price">1 200 ₽ / час</span>
+              <button class="btn-card-action" data-open-modal data-service-type="Математика и подготовка к ОГЭ">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Программа 3: Программирование на Python -->
+          <div class="program-card featured-program fade-in-on-scroll delay-2">
+            <div class="program-card-header">
+              <span class="program-code">03 / IT & CODING</span>
+              <h3 class="program-title">Программирование на Python с нуля</h3>
+            </div>
+            <p class="program-desc">
+              Изучение самого популярного языка программирования в мире. От синтаксиса и алгоритмов до создания собственных ботов для Telegram и 2D-игр.
+            </p>
+            <ul class="program-topics">
+              <li>Типы данных, переменные, ветвления `if/else`, циклы `for` и `while`</li>
+              <li>Списки, кортежи, словари, множества и работа со строками</li>
+              <li>Функции, модули, работа с файлами и обработка исключений</li>
+              <li>Разработка Telegram-ботов с интерактивными кнопками (aiogram)</li>
+              <li>Основы ООП и написание игр на библиотеке Pygame</li>
+            </ul>
+            <div class="program-footer">
+              <span class="program-price">1 200 ₽ / час</span>
+              <button class="btn-card-action btn-accent" data-open-modal data-service-type="Программирование на Python">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Программа 4: Веб-разработка -->
+          <div class="program-card fade-in-on-scroll">
+            <div class="program-card-header">
+              <span class="program-code">04 / WEB-DEV</span>
+              <h3 class="program-title">Создание сайтов (HTML, CSS, JavaScript)</h3>
+            </div>
+            <p class="program-desc">
+              Практический курс веб-разработки: учимся создавать современные адаптивные сайты с нуля и публиковать их в сети Интернет.
+            </p>
+            <ul class="program-topics">
+              <li>Семантическая верстка HTML5: теги, формы, медиа</li>
+              <li>Стилизация CSS3: Flexbox, Grid, адаптивность под смартфоны</li>
+              <li>Основы JavaScript: интерактивные элементы, анимации, DOM</li>
+              <li>Публикация готового сайта на GitHub Pages и Netlify</li>
+            </ul>
+            <div class="program-footer">
+              <span class="program-price">1 200 ₽ / час</span>
+              <button class="btn-card-action" data-open-modal data-service-type="Создание сайтов (Web)">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Программа 5: 3D и Графика -->
+          <div class="program-card fade-in-on-scroll delay-1">
+            <div class="program-card-header">
+              <span class="program-code">05 / DESIGN & 3D</span>
+              <h3 class="program-title">3D-моделирование и графические редакторы</h3>
+            </div>
+            <p class="program-desc">
+              Опыт ведения курса в Академии TOP: изучение основ пространственного моделирования, ретуши и работы с растровой/векторной графикой.
+            </p>
+            <ul class="program-topics">
+              <li>Основы 3D-моделирования в Tinkercad и Blender</li>
+              <li>Работа со слоями, масками и цветом в Adobe Photoshop и GIMP</li>
+              <li>Создание игровых текстур, логотипов и иконок</li>
+              <li>Подготовка 3D-моделей для игр и 3D-печати</li>
+            </ul>
+            <div class="program-footer">
+              <span class="program-price">1 200 ₽ / час</span>
+              <button class="btn-card-action" data-open-modal data-service-type="3D-моделирование и графика">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Программа 6: Нейросети и компьютерная грамотность -->
+          <div class="program-card fade-in-on-scroll delay-2">
+            <div class="program-card-header">
+              <span class="program-code">06 / AI & TECH</span>
+              <h3 class="program-title">Нейросети и цифровая грамотность</h3>
+            </div>
+            <p class="program-desc">
+              Современные инструменты искусственного интеллекта для учебы и творчества, устройство компьютера, безопасность в интернете.
+            </p>
+            <ul class="program-topics">
+              <li>Промпт-инжиниринг: как правильно формулировать запросы к ИИ</li>
+              <li>Генерация текста, изображений и кода с помощью нейросетей</li>
+              <li>Устройство ПК, операционная система, горячие клавиши</li>
+              <li>Информационная безопасность и защита персональных данных</li>
+            </ul>
+            <div class="program-footer">
+              <span class="program-price">1 200 ₽ / час</span>
+              <button class="btn-card-action" data-open-modal data-service-type="Нейросети и цифровая грамотность">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         КАК ПРОХОДЯТ ЗАНЯТИЯ И ФОРМАТЫ (FORMATS & PROCESS)
+         ========================================================================== -->
+    <section class="formats-section" id="formats">
+      <div class="container">
+        <div class="section-head fade-in-on-scroll">
+          <div class="tag-badge">Удобство и качество</div>
+          <h2 class="section-title">Форматы занятий: онлайн и очно в Челябинске</h2>
+          <p class="section-subtitle">Выберите наиболее удобный для вас вариант обучения — эффективность одинаково высока в любом формате.</p>
+        </div>
+
+        <div class="formats-grid">
+          <!-- Онлайн формат -->
+          <div class="format-card fade-in-on-scroll">
+            <div class="format-badge">Любой город РФ</div>
+            <div class="format-icon">💻</div>
+            <h3 class="format-title">Онлайн-занятия</h3>
+            <p class="format-desc">Занимайтесь из уютной домашней обстановки без траты времени на дорогу. Все интерактивные инструменты под рукой.</p>
+            <ul class="format-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Видеосвязь (Telegram, Google Meet, Яндекс Телемост, Discord)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Интерактивная онлайн-доска для формул и чертежей
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Совместное написание кода в реальном времени
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Сохранение записей и конспектов уроков
+              </li>
+            </ul>
+          </div>
+
+          <!-- Очный формат -->
+          <div class="format-card fade-in-on-scroll delay-1">
+            <div class="format-badge">Челябинск</div>
+            <div class="format-icon">📍</div>
+            <h3 class="format-title">Очно с выездом к ученику</h3>
+            <p class="format-desc">Занятия дома у ученика в Челябинске. Привычная спокойная обстановка, живой контакт и максимальная концентрация без поездок по городу.</p>
+            <ul class="format-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Выезд к ученику на дом (Ленинский, Советский, Центральный и др. районы)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Экономия времени ребенка и родителей на дорогу
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Помощь в настройке программ и рабочего места на компьютере ученика
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Прямой контроль над решением задач в тетради и на компьютере
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4 понятных шага к результату -->
+        <div class="steps-process-container">
+          <h3 class="steps-main-title">Как строится обучение: 4 понятных шага</h3>
+          <div class="process-steps-grid">
+            <div class="process-step-card fade-in-on-scroll">
+              <div class="step-num-circle">1</div>
+              <h4 class="step-title">Первый контакт</h4>
+              <p class="step-desc">Напишите мне в Telegram, Макс или VK. Мы обсудим текущий класс, успеваемость и желаемую цель.</p>
+            </div>
+
+            <div class="process-step-card fade-in-on-scroll delay-1">
+              <div class="step-num-circle">2</div>
+              <h4 class="step-title">Пробный урок (600 ₽)</h4>
+              <p class="step-desc">Знакомимся, проводим легкую диагностику знаний, определяем пробелы и составляем индивидуальный план.</p>
+            </div>
+
+            <div class="process-step-card fade-in-on-scroll delay-2">
+              <div class="step-num-circle">3</div>
+              <h4 class="step-title">Регулярные занятия</h4>
+              <p class="step-desc">Занимаемся 1–2 раза в неделю в удобное время (Пн–Вс с 10:00 до 22:00) в спокойном комфортном темпе.</p>
+            </div>
+
+            <div class="process-step-card fade-in-on-scroll delay-3">
+              <div class="step-num-circle">4</div>
+              <h4 class="step-title">Отличный результат</h4>
+              <p class="step-desc">Уверенно сдаем ОГЭ на 4 и 5, закрываем четверти без троек и создаем первые самостоятельные проекты.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ДОКУМЕНТЫ И ОБРАЗОВАНИЕ (EDUCATION & CERTIFICATES)
+         ========================================================================== -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-head fade-in-on-scroll">
+          <div class="tag-badge">Подтвержденная квалификация</div>
+          <h2 class="section-title">Образование, дипломы и сертификаты</h2>
+          <p class="section-subtitle">Официальные документы государственного образца, подтверждающие профильное высшее образование и квалификацию.</p>
+        </div>
+
+        <div class="docs-showcase-grid">
+          <!-- Документ 1: Диплом бакалавра ЮУрГУ -->
+          <div class="doc-card fade-in-on-scroll" data-lightbox="images/diploma-susu.jpg" data-caption="Диплом бакалавра ЮУрГУ: Фундаментальная информатика и информационные технологии (2022–2026)">
+            <div class="doc-preview-wrapper">
+              <img src="images/diploma-susu.jpg" alt="Диплом бакалавра ЮУрГУ Данила Лисенко" loading="lazy">
+              <div class="doc-zoom-overlay">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Нажмите для увеличения</span>
+              </div>
+            </div>
+            <div class="doc-info">
+              <div class="doc-type">Высшее профильное образование</div>
+              <h3 class="doc-title">Диплом бакалавра ЮУрГУ</h3>
+              <p class="doc-sub">«Фундаментальная информатика и информационные технологии», программа «Информатика и компьютерные науки» (2022–2026 гг., диплом № 107404 0119910).</p>
+            </div>
+          </div>
+
+          <!-- Документ 2: Сертификат Иннополис Python -->
+          <div class="doc-card fade-in-on-scroll delay-1" data-lightbox="images/certificate-innopolis.png" data-caption="Сертификат Университета Иннополис: Программа повышения квалификации Python-разработка (2024)">
+            <div class="doc-preview-wrapper">
+              <img src="images/certificate-innopolis.png" alt="Сертификат Университета Иннополис Python разработка" loading="lazy">
+              <div class="doc-zoom-overlay">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Нажмите для увеличения</span>
+              </div>
+            </div>
+            <div class="doc-info">
+              <div class="doc-type">Повышение квалификации</div>
+              <h3 class="doc-title">Университет Иннополис</h3>
+              <p class="doc-sub">Программа «2023 Python разработка» совместно с ЮУрГУ. Успешный ассесмент профессиональных компетенций разработчика.</p>
+            </div>
+          </div>
+
+          <!-- Документ 3: Академия TOP и сюжет ТВ -->
+          <div class="doc-card fade-in-on-scroll delay-2" data-lightbox="images/danil-tv.jpg" data-caption="Телеканал Первое областное: Данил Лисенко в роли преподавателя Компьютерной Академии">
+            <div class="doc-preview-wrapper">
+              <img src="images/danil-tv.jpg" alt="Данил Лисенко на ТВ Первое областное" loading="lazy">
+              <div class="doc-zoom-overlay">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Нажмите для увеличения</span>
+              </div>
+            </div>
+            <div class="doc-info">
+              <div class="doc-type">Преподавательская практика</div>
+              <h3 class="doc-title">Компьютерная академия TOP</h3>
+              <p class="doc-sub">Опыт проведения групповых и индивидуальных занятий для детей 7–16 лет, сюжет на региональном телевидении («Первое областное»).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ОТЗЫВЫ УЧЕНИКОВ И РОДИТЕЛЕЙ (REVIEWS)
+         ========================================================================== -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-head fade-in-on-scroll">
+          <div class="tag-badge">Реальные отзывы</div>
+          <h2 class="section-title">Что говорят ученики и родители</h2>
+          <p class="section-subtitle">Честная обратная связь с подтвержденным статусом «Сделка состоялась» на Авито.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Отзыв 1: Анна -->
+          <div class="review-card featured-review fade-in-on-scroll">
+            <div class="review-card-top">
+              <div class="review-author-box">
+                <div class="review-avatar">А</div>
+                <div>
+                  <div class="review-name">Анна</div>
+                  <div class="review-meta">20 сентября 2024 • Репетитор по информатике/математике</div>
+                </div>
+              </div>
+              <div class="review-deal-pill">Сделка состоялась</div>
+            </div>
+
+            <div class="review-stars">★★★★★</div>
+
+            <p class="review-quote">
+              «Хочется сказать спасибо Данилу Сергеевичу за его труд 🙏🏻🙏🏻🙏🏻 Честно говоря, не думала, что с такими большими проблемами по математике будет какой-то результат за несколько занятий, но он был. Все четко, понятно, объясняет спокойно несколько раз, если что-то непонятно. У брата были большие пробелы из-за непонятного объяснения учителей в школе. Пытались решить эту проблему на протяжении всего периода обучения и наконец-то появились какие-то сдвиги. Ещё раз спасибо!»
+            </p>
+
+            <div class="review-card-footer">
+              <span class="review-verified-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Подтвержденный отзыв с Авито
+              </span>
+              <span class="review-tag">Математика • Ликвидация пробелов</span>
+            </div>
+          </div>
+
+          <!-- Отзыв 2: ИП Белоусова Н.А. -->
+          <div class="review-card fade-in-on-scroll delay-1">
+            <div class="review-card-top">
+              <div class="review-author-box">
+                <div class="review-avatar">Б</div>
+                <div>
+                  <div class="review-name">ИП Белоусова Н.А.</div>
+                  <div class="review-meta">18 сентября 2024 • Репетитор по информатике/математике</div>
+                </div>
+              </div>
+              <div class="review-deal-pill">Сделка состоялась</div>
+            </div>
+
+            <div class="review-stars">★★★★★</div>
+
+            <p class="review-quote">
+              «Очень хороший, грамотный репетитор, помог ребёнку подготовиться к огэ, за что мы все безмерно благодарны. Экзамен сдан. :-) Удобное время согласовывали заранее, что очень удобно. Цены доступные. Рекомендую.»
+            </p>
+
+            <div class="review-card-footer">
+              <span class="review-verified-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Подтвержденный отзыв с Авито
+              </span>
+              <span class="review-tag">Подготовка к ОГЭ • Успешная сдача</span>
+            </div>
+          </div>
+
+          <!-- Отзыв 3: Роза -->
+          <div class="review-card fade-in-on-scroll delay-2">
+            <div class="review-card-top">
+              <div class="review-author-box">
+                <div class="review-avatar">Р</div>
+                <div>
+                  <div class="review-name">Роза</div>
+                  <div class="review-meta">5 апреля • Репетитор по информатике/математике</div>
+                </div>
+              </div>
+              <div class="review-deal-pill">Сделка состоялась</div>
+            </div>
+
+            <div class="review-stars">★★★★★</div>
+
+            <p class="review-quote">
+              «Очень приятный молодой человек. Провел диагностику знаний, все понравилось. Рекомендую всем этого репетитора. Спасибо. Будем продолжать заниматься и надеемся, что знания подтянутся.»
+            </p>
+
+            <div class="review-card-footer">
+              <span class="review-verified-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Подтвержденный отзыв с Авито
+              </span>
+              <span class="review-tag">Диагностика знаний • Индивидуальный подход</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         КАЛЬКУЛЯТОР / ИНТЕРАКТИВНЫЙ ПОДБОР ПЛАНА (CALCULATOR WIDGET)
+         ========================================================================== -->
+    <section class="calculator-section">
+      <div class="container">
+        <div class="calc-card fade-in-on-scroll">
+          <div class="calc-info">
+            <div class="tag-badge">Интерактивный расчет</div>
+            <h2 class="serif-title">Подберите подходящий формат обучения</h2>
+            <p>Выберите предмет, текущий класс и формат — система сразу рассчитает рекомендованное количество занятий и стоимость.</p>
+            
+            <div class="calc-highlights">
+              <div class="highlight-item">
+                <span class="hl-icon">⚡</span>
+                <span>Первый пробный урок — всего 600 ₽ (60 мин)</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🛡️</span>
+                <span>Оплата 50/50: бронь времени + остаток после занятия</span>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🕒</span>
+                <span>Бесплатный перенос или отмена за 24 часа</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-form-box">
+            <div class="calc-field-group">
+              <label class="calc-label">1. Какой предмет вас интересует?</label>
+              <div class="calc-options-grid" id="subjectOptions">
+                <button type="button" class="calc-chip active" data-subject="Информатика">Информатика</button>
+                <button type="button" class="calc-chip" data-subject="Математика">Математика</button>
+                <button type="button" class="calc-chip" data-subject="Python & IT">Python &amp; IT</button>
+              </div>
+            </div>
+
+            <div class="calc-field-group">
+              <label class="calc-label">2. Класс или уровень подготовки</label>
+              <select class="calc-select" id="levelSelect">
+                <option value="5-8 класс (школьная программа)">5–8 классы (устранение пробелов)</option>
+                <option value="9 класс (подготовка к ОГЭ)">9 класс (подготовка к ОГЭ)</option>
+                <option value="Программирование с нуля">Программирование с нуля (игры, боты)</option>
+                <option value="Студент / взрослый">Студент / взрослый (алгоритмы, веб)</option>
+              </select>
+            </div>
+
+            <div class="calc-field-group">
+              <label class="calc-label">3. Формат занятий</label>
+              <div class="calc-options-grid" id="formatOptions">
+                <button type="button" class="calc-chip active" data-format="Онлайн">Онлайн</button>
+                <button type="button" class="calc-chip" data-format="Очно в Челябинске">Очно в Челябинске</button>
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <div class="calc-result-row">
+                <span>Пробное занятие:</span>
+                <strong class="price-val">600 ₽</strong>
+              </div>
+              <div class="calc-result-row">
+                <span>Основное занятие (60 мин):</span>
+                <strong class="price-val">1 200 ₽</strong>
+              </div>
+              <div class="calc-result-row recommendation">
+                <span>Рекомендуемый темп:</span>
+                <span id="recommendationText">1–2 занятия в неделю</span>
+              </div>
+              <button class="btn-primary" style="width:100%; margin-top:16px;" id="calcBookBtn">Записаться по этой программе</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         СТОИМОСТЬ И ТАРИФЫ (PRICING)
+         ========================================================================== -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-head fade-in-on-scroll">
+          <div class="tag-badge">Прозрачные цены</div>
+          <h2 class="section-title">Стоимость занятий без скрытых условий</h2>
+          <p class="section-subtitle">Честные фиксированные цены: вы платите только за фактически проведенные уроки.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Карточка 1: Пробное занятие -->
+          <div class="pricing-card featured fade-in-on-scroll">
+            <span class="pricing-popular-pill">Рекомендуемый старт</span>
+            <div class="pricing-head">
+              <h3 class="pricing-title">Пробный вводный урок</h3>
+              <p class="pricing-for">Для тех, кто обращается ко мне впервые</p>
+            </div>
+            <div class="pricing-price-wrap">
+              <span class="pricing-amount">600 ₽</span>
+              <span class="pricing-duration">/ 1 час (60 мин)</span>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Знакомство и комфортная доверительная беседа
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Диагностика знаний и выявление слабых мест
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Составление пошагового плана подготовки
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Разбор первой темы без спешки и стресса
+              </li>
+            </ul>
+            <div class="pricing-action">
+              <button class="btn-primary" data-open-modal data-service-type="Пробный вводный урок (600 ₽)">Записаться на пробу за 600 ₽</button>
+            </div>
+          </div>
+
+          <!-- Карточка 2: Индивидуальное занятие -->
+          <div class="pricing-card fade-in-on-scroll delay-1">
+            <div class="pricing-head">
+              <h3 class="pricing-title">Индивидуальное занятие</h3>
+              <p class="pricing-for">Регулярные занятия по выбранному предмету</p>
+            </div>
+            <div class="pricing-price-wrap">
+              <span class="pricing-amount">1 200 ₽</span>
+              <span class="pricing-duration">/ 1 час (60 мин)</span>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Индивидуальное 1-на-1 занятие (онлайн или очно)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Все материалы, конспекты и практические файлы входят
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Проверка домашних заданий и поддержка между уроками
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Регулярные отчеты родителям об успехах ученика
+              </li>
+            </ul>
+            <div class="pricing-action">
+              <button class="btn-secondary" data-open-modal data-service-type="Индивидуальное занятие (1 200 ₽)">Выбрать эту услугу</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-terms-bar fade-in-on-scroll">
+          <div class="term-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>График: Пн–Вс с 10:00 до 22:00</span>
+          </div>
+          <div class="term-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <span>Оплата 50% до начала + 50% после урока</span>
+          </div>
+          <div class="term-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Бесплатный перенос за 24 часа</span>
+          </div>
+          <div class="term-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <a href="oferta.html" target="_blank" style="color:var(--primary); text-decoration:underline;">Публичная оферта</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ (FAQ)
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-head fade-in-on-scroll">
+          <div class="tag-badge">Ответы на вопросы</div>
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-subtitle">Собрал ответы на ключевые вопросы родителей и учеников согласно условиям Публичной оферты.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item fade-in-on-scroll">
+            <button class="faq-question-btn">
+              <span>Как проходит первое пробное занятие за 600 рублей?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Продолжительность занятия — полные 60 минут. Мы знакомимся, обсуждаем цели (сдача ОГЭ/ЕГЭ, повышение текущих оценок или программирование) и проводим мягкую диагностику знаний без стресса. Я определяю пробелы и составляю пошаговый план обучения.
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-on-scroll delay-1">
+            <button class="faq-question-btn">
+              <span>Как осуществляется порядок оплаты?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              В соответствии с пунктом 4 Публичной оферты оплата каждого занятия делится на 2 равных этапа: <strong>50% вносится до начала занятия</strong> в качестве предоплаты (для подтверждения и закрепления даты и времени за учеником), а оставшиеся <strong>50% — после окончания урока</strong>. Оплата производится переводом по реквизитам.
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-on-scroll delay-2">
+            <button class="faq-question-btn">
+              <span>Как можно отменить или перенести занятие?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Вы можете <strong>бесплатно перенести или отменить занятие</strong>, предупредив меня не менее чем за <strong>24 часа</strong> до его начала. При отмене менее чем за 24 часа внесенная предоплата удерживается и засчитывается в оплату отмененного урока (кроме документально подтвержденных форс-мажорных обстоятельств). Если занятие отменяется по моей инициативе — время переносится или предоплата возвращается в полном объеме.
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-on-scroll">
+            <button class="faq-question-btn">
+              <span>Что происходит в случае опоздания ученика?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              При опоздании ученика продолжительность занятия не увеличивается и не переносится на конец (например, при слоте 16:00–17:00, если ученик подключился в 16:15, занятие завершается ровно в 17:00). Время ожидания ученика без связи составляет 15 минут.
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-on-scroll delay-1">
+            <button class="faq-question-btn">
+              <span>Что входит в стоимость занятия 1 200 рублей?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              В стоимость входят: 60 минут индивидуального урока, персональный подбор учебного материала, домашние задания, регулярная проверка ДЗ, методические материалы и конспекты, а также рекомендации родителям по прогрессу ученика. Никаких скрытых платежей!
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-on-scroll delay-2">
+            <button class="faq-question-btn">
+              <span>Готовите ли вы к ОГЭ и к ЕГЭ?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Да! Я веду системную подготовку к ОГЭ и ЕГЭ по информатике и математике. Разбираем как тестовую часть, так и сложные задачи с развернутым ответом (программирование на Python, электронные таблицы, геометрия и сложные уравнения).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         КОНТАКТЫ И ЗАПИСЬ (CONTACTS SECTION)
+         ========================================================================== -->
+    <section class="contact-section" id="contacts">
+      <div class="container">
+        <div class="contact-card-main fade-in-on-scroll">
+          <div class="contact-info-col">
+            <div class="tag-badge">Контакты & Связь</div>
+            <h2 class="section-title">Свяжитесь со мной прямо сейчас</h2>
+            <p>
+              Вы можете написать мне в любой удобный мессенджер — задать вопрос или записаться на пробное занятие. Отвечаю оперативно каждый день с 10:00 до 22:00.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <span class="detail-icon">📞</span>
+                <div>
+                  <strong>Прямой телефон:</strong>
+                  <span><a href="tel:+79512605911" style="color:var(--primary); font-weight:700;">+7 (951) 260-59-11</a> (звонки, WhatsApp)</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-icon">✉️</span>
+                <div>
+                  <strong>Электронная почта:</strong>
+                  <span><a href="mailto:danillisenko7@gmail.com" style="color:var(--primary); font-weight:600;">danillisenko7@gmail.com</a></span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-icon">📍</span>
+                <div>
+                  <strong>Локация в Челябинске:</strong>
+                  <span>Челябинск: онлайн по РФ или очно с выездом к ученику (Ленинский, Советский, Центральный и др. районы)</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <span class="detail-icon">🕒</span>
+                <div>
+                  <strong>Рабочее время:</strong>
+                  <span>Понедельник — Воскресенье, 10:00 — 22:00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Карточки мессенджеров -->
+            <div class="messenger-choice-cards">
+              <!-- Telegram -->
+              <a href="https://t.me/Daaniiiiillll" class="msg-card-btn tg" data-messenger="tg" target="_blank" rel="noopener">
+                <div class="msg-card-left">
+                  <div class="msg-badge-icon tg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .31z"/></svg>
+                  </div>
+                  <div>
+                    <div class="msg-text-main">Telegram (@Daaniiiiillll)</div>
+                    <div class="msg-text-hint">Самый быстрый ответ в течение 15 минут</div>
+                  </div>
+                </div>
+                <span class="msg-card-arrow">→</span>
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/79512605911?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5" class="msg-card-btn wa" target="_blank" rel="noopener">
+                <div class="msg-card-left">
+                  <div class="msg-badge-icon wa" style="background:#25D366;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+                  </div>
+                  <div>
+                    <div class="msg-text-main">WhatsApp (+7 951 260-59-11)</div>
+                    <div class="msg-text-hint">Написать напрямую в WhatsApp</div>
+                  </div>
+                </div>
+                <span class="msg-card-arrow">→</span>
+              </a>
+
+              <!-- Макс -->
+              <a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" class="msg-card-btn max" data-messenger="max" target="_blank" rel="noopener">
+                <div class="msg-card-left">
+                  <div class="msg-badge-icon max">
+                    <img src="images/Max_logo_2025.png" alt="Макс" class="max-icon-img">
+                  </div>
+                  <div>
+                    <div class="msg-text-main">Мессенджер Макс</div>
+                    <div class="msg-text-hint">Прямой диалог в приложении Макс</div>
+                  </div>
+                </div>
+                <span class="msg-card-arrow">→</span>
+              </a>
+
+              <!-- VK -->
+              <a href="https://vk.com/fucupls" class="msg-card-btn vk" data-messenger="vk" target="_blank" rel="noopener">
+                <div class="msg-card-left">
+                  <div class="msg-badge-icon vk">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91c-.48.68-1.32.96-2.07.96-.54 0-1.05-.16-1.56-.47-.56-.34-.95-.82-1.29-1.27-.2-.26-.37-.48-.56-.48-.12 0-.25.07-.38.25-.33.48-.48 1.13-.57 1.48-.04.18-.17.33-.35.33h-1.63c-.22 0-.41-.12-.48-.31-.77-2.07-2.11-4.73-4.25-6.28-.2-.14-.26-.38-.15-.59.1-.2.31-.32.54-.32h1.8c.2 0 .37.11.45.29.58 1.34 1.39 2.92 2.15 3.39.18.11.31.06.39-.06.2-.32.22-1.74.22-2.3 0-.69-.14-.99-.54-1.08-.18-.04-.29-.2-.25-.38.05-.2.24-.34.45-.34h2.51c.25 0 .45.19.46.44l.05 2.82c.01.22.1.34.2.34.08 0 .18-.08.31-.24.78-1.02 1.48-2.61 1.55-2.82.07-.2.26-.34.48-.34h1.9c.24 0 .43.15.48.38.06.27-.1 1.05-1.26 2.51-.43.54-.66.86-.66 1.1 0 .21.17.47.53.86.89.97 1.44 1.7 1.51 2.21.04.25-.09.5-.32.65z"/></svg>
+                  </div>
+                  <div>
+                    <div class="msg-text-main">VK (@fucupls)</div>
+                    <div class="msg-text-hint">Личные сообщения в ВКонтакте</div>
+                  </div>
+                </div>
+                <span class="msg-card-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Форма быстрой заявки -->
+          <div class="booking-form-box">
+            <h3>Записаться на занятие</h3>
+            <p>Заполните форму — я свяжусь с вами для согласования удобного времени.</p>
+
+            <form id="mainBookingForm">
+              <div class="form-group">
+                <label class="form-label" for="clientName">Ваше имя</label>
+                <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Как вас зовут?" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="clientContact">Телефон или никнейм в Telegram / VK</label>
+                <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="+7 (___) ___-__-__ или @username" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Где удобнее получить ответ?</label>
+                <div class="form-channel-selector">
+                  <input type="radio" id="ch-tg" name="preferredMessenger" value="telegram" class="channel-radio" checked>
+                  <label for="ch-tg" class="channel-label">Telegram</label>
+
+                  <input type="radio" id="ch-max" name="preferredMessenger" value="max" class="channel-radio">
+                  <label for="ch-max" class="channel-label">
+                    <img src="images/Max_logo_2025.png" alt="Макс" style="width: 16px; height: 16px; object-fit: contain;">
+                    Макс
+                  </label>
+
+                  <input type="radio" id="ch-vk" name="preferredMessenger" value="vk" class="channel-radio">
+                  <label for="ch-vk" class="channel-label">VK</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="serviceSelect">Интересующая программа</label>
+                <select id="serviceSelect" name="serviceType" class="form-select">
+                  <option value="Пробный вводный урок (600 ₽)">Пробный вводный урок (600 ₽ / 60 мин)</option>
+                  <option value="Подготовка к ОГЭ по информатике (1 200 ₽)">Подготовка к ОГЭ по информатике (1 200 ₽ / 60 мин)</option>
+                  <option value="Подготовка к ЕГЭ по информатике (1 200 ₽)">Подготовка к ЕГЭ по информатике (1 200 ₽ / 60 мин)</option>
+                  <option value="ОГЭ и математика 5–9 классы (1 200 ₽)">ОГЭ и математика 5–9 классы (1 200 ₽ / 60 мин)</option>
+                  <option value="Программирование на Python (1 200 ₽)">Программирование на Python (1 200 ₽ / 60 мин)</option>
+                  <option value="Создание сайтов (Web) (1 200 ₽)">Создание сайтов (Web) (1 200 ₽ / 60 мин)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="formatSelect">Формат занятий</label>
+                <select id="formatSelect" name="formatType" class="form-select">
+                  <option value="Онлайн (видеосвязь)">Онлайн (видеосвязь, интерактивная доска)</option>
+                  <option value="Очно с выездом к ученику (Челябинск)">Очно с выездом на дом к ученику (Челябинск)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="clientMessage">Класс ученика или комментарий (по желанию)</label>
+                <textarea id="clientMessage" name="clientMessage" class="form-textarea" placeholder="Например: 9 класс, нужно подготовиться к ОГЭ по информатике и математике"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; margin-top: 8px;">
+                Отправить заявку
+              </button>
+
+              <p style="font-size:0.78rem; color:var(--text-subtle); text-align:center; margin-top:10px;">
+                Отправляя заявку, вы соглашаетесь с условиями <a href="oferta.html" target="_blank" style="color:var(--primary); text-decoration:underline;">Публичной оферты</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Интерактивная карта расположения -->
+        <div class="map-card-wrapper fade-in-on-scroll">
+          <div class="map-header">
+            <div>
+              <h3>География очных занятий и выезда</h3>
+              <p>г. Челябинск: очные уроки проводятся с выездом на дом к ученику (Ленинский, Советский, Центральный и др. районы) или дистанционно онлайн</p>
+            </div>
+            <a href="https://yandex.ru/maps/?text=Челябинск" target="_blank" rel="noopener" class="btn-secondary map-route-btn">
+              Челябинск на Яндекс Картах →
+            </a>
+          </div>
+          <div class="map-frame-box">
+            <iframe 
+              src="https://yandex.ru/map-widget/v1/?ll=61.402554%2C55.159902&z=12" 
+              width="100%" 
+              height="380" 
+              frameborder="0" 
+              allowfullscreen="true" 
+              loading="lazy"
+              title="Челябинск на карте">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       ПОДВАЛ САЙТА (FOOTER)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <img src="images/logo.svg" alt="Логотип Данил Лисенко" class="site-logo-img" width="42" height="42">
+            <div class="logo-text">
+              <span class="logo-name">Данил Лисенко</span>
+              <span class="logo-sub">Информатика • Математика • IT</span>
+            </div>
+          </div>
+          <p>
+            Индивидуальные занятия по информатике, математике и программированию. Доказательный практический подход, глубокие знания и понятное объяснение.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#about">О преподавателе</a></li>
+            <li><a href="#programs">Программы обучения</a></li>
+            <li><a href="#formats">Форматы занятий</a></li>
+            <li><a href="#education">Дипломы и сертификаты</a></li>
+            <li><a href="#reviews">Отзывы учеников</a></li>
+            <li><a href="#pricing">Стоимость занятий</a></li>
+            <li><a href="#faq">Частые вопросы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+79512605911">Тел: +7 (951) 260-59-11</a></li>
+            <li><a href="https://wa.me/79512605911" target="_blank">WhatsApp: написать</a></li>
+            <li><a href="https://t.me/Daaniiiiillll" data-messenger="tg" target="_blank">Telegram: @Daaniiiiillll</a></li>
+            <li><a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" data-messenger="max" target="_blank" rel="noopener">Мессенджер Макс</a></li>
+            <li><a href="https://vk.com/fucupls" data-messenger="vk" target="_blank">VK: @fucupls</a></li>
+            <li><a href="mailto:danillisenko7@gmail.com">danillisenko7@gmail.com</a></li>
+            <li>г. Челябинск (выезд к ученику / онлайн)</li>
+            <li><a href="oferta.html" style="color:var(--accent-cyan); font-weight:600;">Публичная оферта</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Лисенко Данил Сергеевич. Репетитор по информатике и математике. Все права защищены.</div>
+        <div><a href="oferta.html" style="color:inherit; text-decoration:underline;">Публичная оферта на оказание услуг</a> • Челябинск &amp; Онлайн</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       ПЛАВАЮЩИЙ ВИДЖЕТ МЕССЕНДЖЕРОВ (FLOATING FAB)
+       ========================================================================== -->
+  <div class="floating-messengers-widget">
+    <div class="widget-menu" id="widgetMenu">
+      <!-- Telegram -->
+      <a href="https://t.me/Daaniiiiillll" class="widget-item-btn" data-messenger="tg" target="_blank">
+        <span class="widget-icon-circle tg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .31z"/></svg>
+        </span>
+        <span>Telegram</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/79512605911" class="widget-item-btn" target="_blank" rel="noopener">
+        <span class="widget-icon-circle wa" style="background:#25D366;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+        </span>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- Макс -->
+      <a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" class="widget-item-btn" data-messenger="max" target="_blank" rel="noopener">
+        <span class="widget-icon-circle max">
+          <img src="images/Max_logo_2025.png" alt="Макс" class="max-icon-img">
+        </span>
+        <span>Макс</span>
+      </a>
+
+      <!-- VK -->
+      <a href="https://vk.com/fucupls" class="widget-item-btn" data-messenger="vk" target="_blank">
+        <span class="widget-icon-circle vk">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91c-.48.68-1.32.96-2.07.96-.54 0-1.05-.16-1.56-.47-.56-.34-.95-.82-1.29-1.27-.2-.26-.37-.48-.56-.48-.12 0-.25.07-.38.25-.33.48-.48 1.13-.57 1.48-.04.18-.17.33-.35.33h-1.63c-.22 0-.41-.12-.48-.31-.77-2.07-2.11-4.73-4.25-6.28-.2-.14-.26-.38-.15-.59.1-.2.31-.32.54-.32h1.8c.2 0 .37.11.45.29.58 1.34 1.39 2.92 2.15 3.39.18.11.31.06.39-.06.2-.32.22-1.74.22-2.3 0-.69-.14-.99-.54-1.08-.18-.04-.29-.2-.25-.38.05-.2.24-.34.45-.34h2.51c.25 0 .45.19.46.44l.05 2.82c.01.22.1.34.2.34.08 0 .18-.08.31-.24.78-1.02 1.48-2.61 1.55-2.82.07-.2.26-.34.48-.34h1.9c.24 0 .43.15.48.38.06.27-.1 1.05-1.26 2.51-.43.54-.66.86-.66 1.1 0 .21.17.47.53.86.89.97 1.44 1.7 1.51 2.21.04.25-.09.5-.32.65z"/></svg>
+        </span>
+        <span>VKontakte</span>
+      </a>
+    </div>
+
+    <button class="widget-main-btn" id="widgetToggle" aria-label="Открыть варианты быстрой связи">
+      <div class="widget-pulse-ring"></div>
+      <svg class="widget-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </svg>
+      <svg class="widget-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       МОБИЛЬНОЕ ВЫЕЗЖАЮЩЕЕ МЕНЮ (DRAWER)
+       ========================================================================== -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-menu-drawer" id="mobileDrawer">
+    <div class="drawer-top">
+      <div class="logo-wrapper">
+        <img src="images/logo.svg" alt="Логотип Данил Лисенко" class="site-logo-img" width="36" height="36">
+        <span class="logo-name">Данил Лисенко</span>
+      </div>
+      <button id="drawerCloseBtn" class="drawer-close-btn">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#programs">Направления</a></li>
+      <li><a href="#formats">Формат обучения</a></li>
+      <li><a href="#education">Дипломы и опыт</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#pricing">Цены</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+      <li><a href="oferta.html" style="color:var(--primary);">Публичная оферта</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn-primary" data-open-modal style="width: 100%;">Записаться на урок</button>
+      
+      <div class="mobile-drawer-messengers">
+        <a href="https://t.me/Daaniiiiillll" class="icon-btn-messenger tg" data-messenger="tg" title="Telegram @Daaniiiiillll">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .31z"/>
+          </svg>
+        </a>
+        <a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" class="icon-btn-messenger max" data-messenger="max" target="_blank" rel="noopener" title="Макс">
+          <img src="images/Max_logo_2025.png" alt="Макс" class="max-icon-img">
+        </a>
+        <a href="https://vk.com/fucupls" class="icon-btn-messenger vk" data-messenger="vk" title="VK @fucupls">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91c-.48.68-1.32.96-2.07.96-.54 0-1.05-.16-1.56-.47-.56-.34-.95-.82-1.29-1.27-.2-.26-.37-.48-.56-.48-.12 0-.25.07-.38.25-.33.48-.48 1.13-.57 1.48-.04.18-.17.33-.35.33h-1.63c-.22 0-.41-.12-.48-.31-.77-2.07-2.11-4.73-4.25-6.28-.2-.14-.26-.38-.15-.59.1-.2.31-.32.54-.32h1.8c.2 0 .37.11.45.29.58 1.34 1.39 2.92 2.15 3.39.18.11.31.06.39-.06.2-.32.22-1.74.22-2.3 0-.69-.14-.99-.54-1.08-.18-.04-.29-.2-.25-.38.05-.2.24-.34.45-.34h2.51c.25 0 .45.19.46.44l.05 2.82c.01.22.1.34.2.34.08 0 .18-.08.31-.24.78-1.02 1.48-2.61 1.55-2.82.07-.2.26-.34.48-.34h1.9c.24 0 .43.15.48.38.06.27-.1 1.05-1.26 2.51-.43.54-.66.86-.66 1.1 0 .21.17.47.53.86.89.97 1.44 1.7 1.51 2.21.04.25-.09.5-.32.65z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       МОДАЛЬНОЕ ОКНО ЗАПИСИ (BOOKING MODAL)
+       ========================================================================== -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-window">
+      <button class="modal-close-btn" data-close-modal>&times;</button>
+      <h3 class="modal-title">Запись на занятие</h3>
+      <p class="modal-sub">Заполните поля ниже — я свяжусь с вами в выбранном мессенджере.</p>
+
+      <form id="modalBookingForm">
+        <div class="form-group">
+          <label class="form-label" for="modalName">Ваше имя</label>
+          <input type="text" id="modalName" name="clientName" class="form-input" placeholder="Как к вам обращаться?" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalContact">Номер телефона или ник в Telegram / VK</label>
+          <input type="text" id="modalContact" name="clientContact" class="form-input" placeholder="+7 (___) ___-__-__ или @username" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Удобный канал для связи</label>
+          <div class="form-channel-selector">
+            <input type="radio" id="modal-tg" name="preferredMessenger" value="telegram" class="channel-radio" checked>
+            <label for="modal-tg" class="channel-label">Telegram</label>
+
+            <input type="radio" id="modal-max" name="preferredMessenger" value="max" class="channel-radio">
+            <label for="modal-max" class="channel-label">
+              <img src="images/Max_logo_2025.png" alt="Макс" style="width: 16px; height: 16px; object-fit: contain;">
+              Макс
+            </label>
+
+            <input type="radio" id="modal-vk" name="preferredMessenger" value="vk" class="channel-radio">
+            <label for="modal-vk" class="channel-label">VK</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalService">Программа / услуга</label>
+          <select id="modalService" name="serviceType" class="form-select">
+            <option value="Пробный вводный урок (600 ₽)">Пробный вводный урок (600 ₽ / 60 мин)</option>
+            <option value="Подготовка к ОГЭ по информатике (1 200 ₽)">Подготовка к ОГЭ по информатике (1 200 ₽)</option>
+            <option value="Подготовка к ЕГЭ по информатике (1 200 ₽)">Подготовка к ЕГЭ по информатике (1 200 ₽)</option>
+            <option value="ОГЭ и математика 5–9 классы (1 200 ₽)">ОГЭ и математика 5–9 классы (1 200 ₽)</option>
+            <option value="Программирование на Python (1 200 ₽)">Программирование на Python (1 200 ₽)</option>
+            <option value="Создание сайтов (Web) (1 200 ₽)">Создание сайтов (Web) (1 200 ₽)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalFormat">Формат занятий</label>
+          <select id="modalFormat" name="formatType" class="form-select">
+            <option value="Онлайн (видеосвязь)">Онлайн (видеосвязь, интерактивная доска)</option>
+            <option value="Очно с выездом к ученику (Челябинск)">Очно с выездом на дом к ученику (Челябинск)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalMessage">Возраст/класс и цель (не обязательно)</label>
+          <textarea id="modalMessage" name="clientMessage" class="form-textarea" placeholder="Коротко о вашей задаче"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%;">
+          Отправить заявку
+        </button>
+
+        <p style="font-size:0.78rem; color:var(--text-subtle); text-align:center; margin-top:10px;">
+          Отправляя заявку, вы соглашаетесь с условиями <a href="oferta.html" target="_blank" style="color:var(--primary); text-decoration:underline;">Публичной оферты</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       МОДАЛЬНОЕ ОКНО ДЛЯ МЕССЕНДЖЕРА МАКС
+       ========================================================================== -->
+  <div class="modal-overlay" id="maxModal">
+    <div class="modal-window max-modal-box">
+      <button class="modal-close-btn" data-close-max-modal>&times;</button>
+      <div class="max-badge-header">
+        <img src="images/Max_logo_2025.png" alt="Макс" class="max-icon-img" style="width: 36px; height: 36px;">
+      </div>
+      <h3 class="modal-title" style="margin-top: 14px;">Мессенджер «Макс»</h3>
+      <p class="modal-sub">Напишите репетитору Данилу Сергеевичу в приложении Макс</p>
+
+      <div class="max-modal-buttons">
+        <a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" target="_blank" rel="noopener noreferrer" class="btn-primary" style="flex: 1; text-align: center; justify-content: center;">
+          Открыть диалог в Макс
+        </a>
+        <button type="button" class="btn-secondary" data-close-max-modal style="flex: 1; text-align: center; justify-content: center;">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       МОДАЛЬНОЕ ОКНО РЕЗУЛЬТАТА ЗАЯВКИ
+       ========================================================================== -->
+  <div class="modal-overlay" id="requestSentModal">
+    <div class="modal-window request-sent-box">
+      <button class="modal-close-btn" data-close-sent-modal>&times;</button>
+      <div class="sent-success-badge" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 6L9 17l-5-5"/>
+        </svg>
+      </div>
+      <h3 class="modal-title" style="text-align: center;">Заявка сформирована!</h3>
+      <p class="modal-sub" style="text-align: center;">Спасибо за обращение. Я свяжусь с вами в ближайшее время.</p>
+
+      <div class="sent-summary-card" id="sentSummaryCard">
+        <!-- Наполняется автоматически скриптом -->
+      </div>
+
+      <p style="font-size: 0.95rem; color: var(--text-muted); text-align: center; margin: 18px 0 14px;">
+        Вы также можете сразу написать мне в любой удобный мессенджер:
+      </p>
+
+      <div class="sent-actions-stack">
+        <a href="https://t.me/Daaniiiiillll" target="_blank" rel="noopener" class="btn-secondary sent-btn-tg" style="justify-content: center; width: 100%;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .31z"/></svg>
+          Написать в Telegram (@Daaniiiiillll)
+        </a>
+        <a href="https://wa.me/79512605911" target="_blank" rel="noopener" class="btn-secondary sent-btn-wa" style="justify-content: center; width: 100%;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+          Написать в WhatsApp (+7 951 260-59-11)
+        </a>
+        <a href="https://max.ru/u/f9LHodD0cOIo3znO6_LbUv055dSgC2c6dRqZANh7C4VAN-Ql9ddlgEyAAno" target="_blank" rel="noopener noreferrer" class="btn-secondary sent-btn-max" style="justify-content: center; width: 100%;">
+          <img src="images/Max_logo_2025.png" alt="Макс" class="max-icon-img" style="width: 20px; height: 20px;">
+          Написать в Макс
+        </a>
+        <a href="https://vk.com/fucupls" target="_blank" rel="noopener" class="btn-secondary sent-btn-vk" style="justify-content: center; width: 100%;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91c-.48.68-1.32.96-2.07.96-.54 0-1.05-.16-1.56-.47-.56-.34-.95-.82-1.29-1.27-.2-.26-.37-.48-.56-.48-.12 0-.25.07-.38.25-.33.48-.48 1.13-.57 1.48-.04.18-.17.33-.35.33h-1.63c-.22 0-.41-.12-.48-.31-.77-2.07-2.11-4.73-4.25-6.28-.2-.14-.26-.38-.15-.59.1-.2.31-.32.54-.32h1.8c.2 0 .37.11.45.29.58 1.34 1.39 2.92 2.15 3.39.18.11.31.06.39-.06.2-.32.22-1.74.22-2.3 0-.69-.14-.99-.54-1.08-.18-.04-.29-.2-.25-.38.05-.2.24-.34.45-.34h2.51c.25 0 .45.19.46.44l.05 2.82c.01.22.1.34.2.34.08 0 .18-.08.31-.24.78-1.02 1.48-2.61 1.55-2.82.07-.2.26-.34.48-.34h1.9c.24 0 .43.15.48.38.06.27-.1 1.05-1.26 2.51-.43.54-.66.86-.66 1.1 0 .21.17.47.53.86.89.97 1.44 1.7 1.51 2.21.04.25-.09.5-.32.65z"/></svg>
+          Написать в VK (@fucupls)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ЛАЙТБОКС ДЛЯ ПРОСМОТРА ДИПЛОМОВ / СЕРТИФИКАТОВ
+       ========================================================================== -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <div class="lightbox-container">
+      <button class="lightbox-close-btn" id="lightboxClose">&times;</button>
+      <div class="lightbox-content">
+        <img src="" alt="Просмотр документа" id="lightboxImage">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
