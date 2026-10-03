@@ -23,20 +23,118 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ======= PRELOADER ======= */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .preloader-logo {
+      width: 310px;
+      max-width: 85vw;
+      height: auto;
+      animation: preloader-pulse 1.8s ease-in-out infinite;
+      filter: drop-shadow(0 0 24px rgba(59,130,246,0.35));
+    }
+    @keyframes preloader-pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50%       { transform: scale(1.04); opacity: 0.85; }
+    }
+    .preloader-bar-wrap {
+      width: 260px;
+      max-width: 70vw;
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      height: 5px;
+      overflow: hidden;
+    }
+    .preloader-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2563eb, #38bdf8, #2563eb);
+      background-size: 200% 100%;
+      animation: preloader-shimmer 1.4s linear infinite;
+      transition: width 0.3s ease;
+    }
+    @keyframes preloader-shimmer {
+      0%   { background-position: 100% 0; }
+      100% { background-position: -100% 0; }
+    }
+    .preloader-hint {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(148,163,184,0.7);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ========== PRELOADER ========== -->
+  <div id="preloader">
+    <img src="images/logo-full-dark.png" alt="Данил Лисенко" class="preloader-logo">
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar" id="preloaderBar"></div>
+    </div>
+    <span class="preloader-hint">Загрузка сайта…</span>
+  </div>
+
+  <script>
+    (function () {
+      var bar = document.getElementById('preloaderBar');
+      var loader = document.getElementById('preloader');
+      var progress = 0;
+
+      // Плавно наполняем шкалу до 85% пока страница грузится
+      var ticker = setInterval(function () {
+        if (progress < 85) {
+          progress += (85 - progress) * 0.07;
+          bar.style.width = progress.toFixed(1) + '%';
+        }
+      }, 60);
+
+      // По завершению загрузки — быстро добиваем до 100% и скрываем
+      window.addEventListener('load', function () {
+        clearInterval(ticker);
+        progress = 100;
+        bar.style.width = '100%';
+        setTimeout(function () {
+          loader.classList.add('hidden');
+        }, 350);
+      });
+
+      // Страховка: скрываем через 5 сек в любом случае
+      setTimeout(function () {
+        clearInterval(ticker);
+        bar.style.width = '100%';
+        loader.classList.add('hidden');
+      }, 5000);
+    })();
+  </script>
 
   <!-- ==========================================================================
        ВЕРХНЯЯ ШАПКА САЙТА (HEADER)
        ========================================================================== -->
   <header class="site-header" id="header">
     <div class="container header-container">
-      <a href="#" class="logo-wrapper">
-        <img src="images/logo.svg" alt="Логотип Данил Лисенко" class="site-logo-img" width="42" height="42">
-        <div class="logo-text">
-          <span class="logo-name">Данил Лисенко</span>
-          <span class="logo-sub">Информатика • Математика • IT</span>
-        </div>
+      <a href="#" class="logo-wrapper" title="Данил Лисенко — Информатика • Математика • IT">
+        <img src="images/logo-dl.png" alt="Данил Лисенко" class="site-logo-img" style="height:48px; width:auto; border-radius:0;">
       </a>
 
       <!-- Основная навигация -->
@@ -104,8 +202,8 @@
           </p>
 
           <div class="hero-actions">
-            <button class="btn-primary" data-open-modal data-service-type="Пробный вводный урок (600 ₽)">
-              <span>Записаться на пробный урок — 600 ₽</span>
+            <button class="btn-primary" data-open-modal data-service-type="Пробный вводный урок">
+              <span>Записаться на пробное занятие</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
             <a href="#about" class="btn-secondary">Узнать обо мне</a>
@@ -140,8 +238,8 @@
               <span class="stat-label">репетиторской практики</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">1 200 ₽</span>
-              <span class="stat-label">1 час (пробный — 600 ₽)</span>
+              <span class="stat-number">от 1 200 ₽</span>
+              <span class="stat-label">1 час (пробный — от 600 ₽)</span>
             </div>
             <div class="stat-item">
               <span class="stat-number">ЮУрГУ</span>
@@ -391,8 +489,8 @@
               <li>Задание 15 (Программирование на Python или робот Кумир)</li>
             </ul>
             <div class="program-footer">
-              <span class="program-price">1 200 ₽ / час</span>
-              <button class="btn-card-action" data-open-modal data-service-type="Подготовка к ОГЭ по информатике">Записаться</button>
+              <span class="program-price">от 1 200 ₽ / час</span>
+              <button class="btn-card-action" data-open-modal data-service-type="Подготовка к ОГЭ и ЕГЭ по информатике">Записаться</button>
             </div>
           </div>
 
@@ -413,8 +511,8 @@
               <li>Разбор сложных задач второй части (№20, №21, №23)</li>
             </ul>
             <div class="program-footer">
-              <span class="program-price">1 200 ₽ / час</span>
-              <button class="btn-card-action" data-open-modal data-service-type="Математика и подготовка к ОГЭ">Записаться</button>
+              <span class="program-price">от 1 200 ₽ / час</span>
+              <button class="btn-card-action" data-open-modal data-service-type="ОГЭ, ЕГЭ и школьная математика">Записаться</button>
             </div>
           </div>
 
@@ -435,8 +533,8 @@
               <li>Основы ООП и написание игр на библиотеке Pygame</li>
             </ul>
             <div class="program-footer">
-              <span class="program-price">1 200 ₽ / час</span>
-              <button class="btn-card-action btn-accent" data-open-modal data-service-type="Программирование на Python">Записаться</button>
+              <span class="program-price">от 1 400 ₽ / час</span>
+              <button class="btn-card-action btn-accent" data-open-modal data-service-type="Программирование на Python с нуля">Записаться</button>
             </div>
           </div>
 
@@ -456,7 +554,7 @@
               <li>Публикация готового сайта на GitHub Pages и Netlify</li>
             </ul>
             <div class="program-footer">
-              <span class="program-price">1 200 ₽ / час</span>
+              <span class="program-price">от 1 400 ₽ / час</span>
               <button class="btn-card-action" data-open-modal data-service-type="Создание сайтов (Web)">Записаться</button>
             </div>
           </div>
@@ -477,7 +575,7 @@
               <li>Подготовка 3D-моделей для игр и 3D-печати</li>
             </ul>
             <div class="program-footer">
-              <span class="program-price">1 200 ₽ / час</span>
+              <span class="program-price">от 1 400 ₽ / час</span>
               <button class="btn-card-action" data-open-modal data-service-type="3D-моделирование и графика">Записаться</button>
             </div>
           </div>
@@ -498,7 +596,7 @@
               <li>Информационная безопасность и защита персональных данных</li>
             </ul>
             <div class="program-footer">
-              <span class="program-price">1 200 ₽ / час</span>
+              <span class="program-price">от 1 400 ₽ / час</span>
               <button class="btn-card-action" data-open-modal data-service-type="Нейросети и цифровая грамотность">Записаться</button>
             </div>
           </div>
@@ -531,7 +629,7 @@
             <div class="academic-author-tag">Экспертная поддержка по точным наукам и IT</div>
             <h3 class="academic-author-title">Приветствую! Меня зовут Данил Сергеевич Лисенко</h3>
             <p class="academic-author-bio">
-              Я — практикующий преподаватель и студент 3 курса ЮУрГУ направления «Фундаментальная информатика и информационные технологии». Прошел курсы повышения квалификации «Python-разработка» в ЮУрГУ, преподаю программирование в Компьютерной Академии TOP и веду частную практику. Уже помог десяткам школьников и студентов успешно разобраться в сложных дисциплинах, сдать долги и закрыть сессию на отлично!
+              Я — практикующий инженер-программист и выпускник ЮУрГУ (бакалавр по направлению «Фундаментальная информатика и информационные технологии»). Прошел курсы повышения квалификации «Python-разработка» совместно с Университетом Иннополис, преподавал программирование в Компьютерной Академии TOP и активно веду частную репетиторскую практику. Уже помог десяткам школьников и студентов разобраться в сложных дисциплинах, закрыть сессию на отлично и успешно сдать ОГЭ!
             </p>
             <div class="academic-target-tags">
               <span class="target-tag">🎒 Школа (5–11 классы)</span>
@@ -581,7 +679,7 @@
             <div class="acad-card-icon">⚡</div>
             <h4 class="acad-card-title">Срочная помощь от 24 часов</h4>
             <p class="acad-card-desc">«Горит» дедлайн? Оперативно подключусь к решению задачи даже в критические сроки. Быстрая оценка стоимости.</p>
-            <div class="acad-price-tag">от 500 ₽</div>
+            <div class="acad-price-tag">от 800 ₽</div>
           </div>
         </div>
 
@@ -616,7 +714,7 @@
                 <div class="acad-feature-bullet">🔹</div>
                 <div>
                   <strong>Честная цена:</strong>
-                  <span>От 500 руб. Точная прозрачная стоимость рассчитывается после быстрого ознакомления с файлом задания.</span>
+                  <span>От 800 руб. Точная прозрачная стоимость рассчитывается после быстрого ознакомления с файлом задания.</span>
                 </div>
               </div>
               <div class="acad-feature-item">
@@ -682,7 +780,7 @@
               Напишите мне прямо сейчас — разберем задачу, согласуем срок и снимем учебную нагрузку без лишних переживаний.
             </p>
             <div class="academic-cta-actions">
-              <button class="btn-primary" data-open-modal data-service-type="Помощь с учебной работой (от 500 ₽)">
+              <button class="btn-primary" data-open-modal data-service-type="Помощь с учебной работой (от 800 ₽)">
                 <span>Оценить стоимость задания</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
@@ -779,7 +877,7 @@
 
             <div class="process-step-card fade-in-on-scroll delay-1">
               <div class="step-num-circle">2</div>
-              <h4 class="step-title">Пробный урок (600 ₽)</h4>
+              <h4 class="step-title">Пробный вводный урок</h4>
               <p class="step-desc">Знакомимся, проводим легкую диагностику знаний, определяем пробелы и составляем индивидуальный план.</p>
             </div>
 
@@ -991,7 +1089,7 @@
             <div class="calc-highlights">
               <div class="highlight-item">
                 <span class="hl-icon">⚡</span>
-                <span>Первый пробный урок — всего 600 ₽ (60 мин)</span>
+                <span>Первый пробный урок — от 600 ₽ (60 мин)</span>
               </div>
               <div class="highlight-item">
                 <span class="hl-icon">🛡️</span>
@@ -1017,10 +1115,11 @@
             <div class="calc-field-group">
               <label class="calc-label">2. Класс или уровень подготовки</label>
               <select class="calc-select" id="levelSelect">
-                <option value="5-8 класс (школьная программа)">5–8 классы (устранение пробелов)</option>
+                <option value="5-8 класс (школьная программа)">5–8 классы (математика / информатика)</option>
                 <option value="9 класс (подготовка к ОГЭ)">9 класс (подготовка к ОГЭ)</option>
-                <option value="Программирование с нуля">Программирование с нуля (игры, боты)</option>
-                <option value="Студент / взрослый">Студент / взрослый (алгоритмы, веб)</option>
+                <option value="10-11 класс (подготовка к ЕГЭ)">10–11 классы (подготовка к ЕГЭ)</option>
+                <option value="Python / Сайты / IT с нуля">Python / Сайты / IT с нуля</option>
+                <option value="Студент / ВУЗ (помощь с работами)">Помощь с вузовскими работами</option>
               </select>
             </div>
 
@@ -1035,15 +1134,15 @@
             <div class="calc-result-box">
               <div class="calc-result-row">
                 <span>Пробное занятие:</span>
-                <strong class="price-val">600 ₽</strong>
+                <strong class="price-val" id="calcTrialPrice">600 ₽</strong>
               </div>
               <div class="calc-result-row">
                 <span>Основное занятие (60 мин):</span>
-                <strong class="price-val">1 200 ₽</strong>
+                <strong class="price-val" id="calcMainPrice">1 200 ₽</strong>
               </div>
               <div class="calc-result-row recommendation">
                 <span>Рекомендуемый темп:</span>
-                <span id="recommendationText">1–2 занятия в неделю</span>
+                <span id="recommendationText">1–2 занятия в неделю (школьная программа, устранение пробелов)</span>
               </div>
               <button class="btn-primary" style="width:100%; margin-top:16px;" id="calcBookBtn">Записаться по этой программе</button>
             </div>
@@ -1063,73 +1162,53 @@
           <p class="section-subtitle">Честные фиксированные цены: вы платите только за фактически проведенные уроки.</p>
         </div>
 
-        <div class="pricing-grid">
-          <!-- Карточка 1: Пробное занятие -->
-          <div class="pricing-card featured fade-in-on-scroll">
-            <span class="pricing-popular-pill">Рекомендуемый старт</span>
-            <div class="pricing-head">
-              <h3 class="pricing-title">Пробный вводный урок</h3>
-              <p class="pricing-for">Для тех, кто обращается ко мне впервые</p>
-            </div>
-            <div class="pricing-price-wrap">
-              <span class="pricing-amount">600 ₽</span>
-              <span class="pricing-duration">/ 1 час (60 мин)</span>
-            </div>
-            <ul class="pricing-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Знакомство и комфортная доверительная беседа
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Диагностика знаний и выявление слабых мест
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Составление пошагового плана подготовки
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Разбор первой темы без спешки и стресса
-              </li>
-            </ul>
-            <div class="pricing-action">
-              <button class="btn-primary" data-open-modal data-service-type="Пробный вводный урок (600 ₽)">Записаться на пробу за 600 ₽</button>
-            </div>
-          </div>
+        <!-- Таблица цен по направлениям -->
+        <div class="pricing-table-wrap fade-in-on-scroll" style="overflow-x:auto;">
+          <table class="pricing-table" style="width:100%;border-collapse:collapse;font-size:0.97rem;">
+            <thead>
+              <tr style="background:var(--primary-light,#eff6ff);">
+                <th style="padding:14px 18px;text-align:left;font-weight:700;color:var(--text-main);border-bottom:2px solid var(--primary,#2563eb);">Направление</th>
+                <th style="padding:14px 18px;text-align:center;font-weight:700;color:var(--primary,#2563eb);border-bottom:2px solid var(--primary,#2563eb);">💻 Онлайн</th>
+                <th style="padding:14px 18px;text-align:center;font-weight:700;color:var(--primary,#2563eb);border-bottom:2px solid var(--primary,#2563eb);">📍 С выездом (Челябинск)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:#f8fbff;">
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);font-weight:600;">⭐ Пробный вводный урок <span style="font-weight:400;font-size:0.88em;color:var(--text-muted);">(60 мин)</span></td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:700;color:var(--primary,#2563eb);">600 ₽</td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:700;color:var(--primary,#2563eb);">800 ₽</td>
+              </tr>
+              <tr>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);">📚 5–8 классы <span style="color:var(--text-muted);font-size:0.88em;">(математика / информатика)</span></td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 200 ₽</td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 500 ₽</td>
+              </tr>
+              <tr style="background:#f8fbff;">
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);">🎯 Подготовка к ОГЭ <span style="color:var(--text-muted);font-size:0.88em;">(9 класс)</span></td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 200 ₽</td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 500 ₽</td>
+              </tr>
+              <tr>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);">🏆 Подготовка к ЕГЭ <span style="color:var(--text-muted);font-size:0.88em;">(10–11 классы)</span></td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 500 ₽</td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 800 ₽</td>
+              </tr>
+              <tr style="background:#f8fbff;">
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);">🐍 Python / Сайты / IT с нуля</td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 400 ₽</td>
+                <td style="padding:13px 18px;border-bottom:1px solid var(--border,#e2e8f0);text-align:center;font-weight:600;">1 700 ₽</td>
+              </tr>
+              <tr>
+                <td style="padding:13px 18px;">🎓 Помощь с вузовскими работами</td>
+                <td style="padding:13px 18px;text-align:center;font-weight:600;" colspan="2">от 800 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          <!-- Карточка 2: Индивидуальное занятие -->
-          <div class="pricing-card fade-in-on-scroll delay-1">
-            <div class="pricing-head">
-              <h3 class="pricing-title">Индивидуальное занятие</h3>
-              <p class="pricing-for">Регулярные занятия по выбранному предмету</p>
-            </div>
-            <div class="pricing-price-wrap">
-              <span class="pricing-amount">1 200 ₽</span>
-              <span class="pricing-duration">/ 1 час (60 мин)</span>
-            </div>
-            <ul class="pricing-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Индивидуальное 1-на-1 занятие (онлайн или очно)
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Все материалы, конспекты и практические файлы входят
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Проверка домашних заданий и поддержка между уроками
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                Регулярные отчеты родителям об успехах ученика
-              </li>
-            </ul>
-            <div class="pricing-action">
-              <button class="btn-secondary" data-open-modal data-service-type="Индивидуальное занятие (1 200 ₽)">Выбрать эту услугу</button>
-            </div>
-          </div>
+        <div style="margin-top:28px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;" class="fade-in-on-scroll">
+          <button class="btn-primary" data-open-modal data-service-type="Пробный вводный урок">Записаться на пробное занятие</button>
+          <button class="btn-secondary" data-open-modal>Выбрать направление</button>
         </div>
 
         <div class="pricing-terms-bar fade-in-on-scroll">
@@ -1167,7 +1246,7 @@
         <div class="faq-accordion">
           <div class="faq-item fade-in-on-scroll">
             <button class="faq-question-btn">
-              <span>Как проходит первое пробное занятие за 600 рублей?</span>
+              <span>Как проходит первое пробное занятие?</span>
               <span class="faq-toggle-icon">+</span>
             </button>
             <div class="faq-answer">
@@ -1207,11 +1286,11 @@
 
           <div class="faq-item fade-in-on-scroll delay-1">
             <button class="faq-question-btn">
-              <span>Что входит в стоимость занятия 1 200 рублей?</span>
+              <span>Из чего складывается стоимость занятия?</span>
               <span class="faq-toggle-icon">+</span>
             </button>
             <div class="faq-answer">
-              В стоимость входят: 60 минут индивидуального урока, персональный подбор учебного материала, домашние задания, регулярная проверка ДЗ, методические материалы и конспекты, а также рекомендации родителям по прогрессу ученика. Никаких скрытых платежей!
+              Цена зависит от направления и формата: онлайн — от 1 200 до 1 500 ₽/час, очно в Челябинске — от 1 500 до 1 800 ₽/час. Пробный урок — 600 ₽ онлайн. В стоимость входят: 60 минут индивидуального урока, персональный подбор учебного материала, домашние задания, регулярная проверка ДЗ, методические материалы и конспекты. Никаких скрытых платежей!
             </div>
           </div>
 
@@ -1368,13 +1447,13 @@
               <div class="form-group">
                 <label class="form-label" for="serviceSelect">Интересующая программа</label>
                 <select id="serviceSelect" name="serviceType" class="form-select">
-                  <option value="Пробный вводный урок (600 ₽)">Пробный вводный урок (600 ₽ / 60 мин)</option>
-                  <option value="Подготовка к ОГЭ по информатике (1 200 ₽)">Подготовка к ОГЭ по информатике (1 200 ₽ / 60 мин)</option>
-                  <option value="Подготовка к ЕГЭ по информатике (1 200 ₽)">Подготовка к ЕГЭ по информатике (1 200 ₽ / 60 мин)</option>
-                  <option value="ОГЭ и математика 5–9 классы (1 200 ₽)">ОГЭ и математика 5–9 классы (1 200 ₽ / 60 мин)</option>
-                  <option value="Программирование на Python (1 200 ₽)">Программирование на Python (1 200 ₽ / 60 мин)</option>
-                  <option value="Создание сайтов (Web) (1 200 ₽)">Создание сайтов (Web) (1 200 ₽ / 60 мин)</option>
-                  <option value="Помощь с учебной работой (от 500 ₽)">Помощь в выполнении учебных работ (от 500 ₽)</option>
+                  <option value="Пробный вводный урок">Пробный вводный урок (60 мин)</option>
+                  <option value="5–8 классы (математика / информатика)">5–8 классы (математика / информатика)</option>
+                  <option value="Подготовка к ОГЭ (9 класс)">Подготовка к ОГЭ (9 класс)</option>
+                  <option value="Подготовка к ЕГЭ (10–11 классы)">Подготовка к ЕГЭ (10–11 классы)</option>
+                  <option value="Python / Программирование с нуля">Python / Программирование с нуля</option>
+                  <option value="Создание сайтов (Web)">Создание сайтов (HTML, CSS, JavaScript)</option>
+                  <option value="Помощь с вузовскими работами">Помощь с вузовскими работами</option>
                 </select>
               </div>
 
@@ -1412,12 +1491,8 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="logo-wrapper">
-            <img src="images/logo.svg" alt="Логотип Данил Лисенко" class="site-logo-img" width="42" height="42">
-            <div class="logo-text">
-              <span class="logo-name">Данил Лисенко</span>
-              <span class="logo-sub">Информатика • Математика • IT</span>
-            </div>
+          <div class="logo-wrapper" style="margin-bottom: 16px;">
+            <img src="images/logo-full-dark.png" alt="Данил Лисенко" style="height: 52px; width: auto; max-width: 100%;">
           </div>
           <p>
             Индивидуальные занятия по информатике, математике и программированию. Доказательный практический подход, глубокие знания и понятное объяснение.
@@ -1517,7 +1592,7 @@
   <div class="mobile-menu-drawer" id="mobileDrawer">
     <div class="drawer-top">
       <div class="logo-wrapper">
-        <img src="images/logo.svg" alt="Логотип Данил Лисенко" class="site-logo-img" width="36" height="36">
+        <img src="images/logo-dl.png" alt="Данил Лисенко" class="site-logo-img" style="height:36px; width:auto; border-radius:0;">
         <span class="logo-name">Данил Лисенко</span>
       </div>
       <button id="drawerCloseBtn" class="drawer-close-btn">&times;</button>
@@ -1595,13 +1670,13 @@
         <div class="form-group">
           <label class="form-label" for="modalService">Программа / услуга</label>
           <select id="modalService" name="serviceType" class="form-select">
-            <option value="Пробный вводный урок (600 ₽)">Пробный вводный урок (600 ₽ / 60 мин)</option>
-            <option value="Подготовка к ОГЭ по информатике (1 200 ₽)">Подготовка к ОГЭ по информатике (1 200 ₽)</option>
-            <option value="Подготовка к ЕГЭ по информатике (1 200 ₽)">Подготовка к ЕГЭ по информатике (1 200 ₽)</option>
-            <option value="ОГЭ и математика 5–9 классы (1 200 ₽)">ОГЭ и математика 5–9 классы (1 200 ₽)</option>
-            <option value="Программирование на Python (1 200 ₽)">Программирование на Python (1 200 ₽)</option>
-            <option value="Создание сайтов (Web) (1 200 ₽)">Создание сайтов (Web) (1 200 ₽)</option>
-            <option value="Помощь с учебной работой (от 500 ₽)">Помощь в выполнении учебных работ (от 500 ₽)</option>
+            <option value="Пробный вводный урок">Пробный вводный урок (60 мин)</option>
+            <option value="5–8 классы (математика / информатика)">5–8 классы (математика / информатика)</option>
+            <option value="Подготовка к ОГЭ (9 класс)">Подготовка к ОГЭ (9 класс)</option>
+            <option value="Подготовка к ЕГЭ (10–11 классы)">Подготовка к ЕГЭ (10–11 классы)</option>
+            <option value="Python / Программирование с нуля">Python / Программирование с нуля</option>
+            <option value="Создание сайтов (Web)">Создание сайтов (HTML, CSS, JavaScript)</option>
+            <option value="Помощь с вузовскими работами">Помощь с вузовскими работами</option>
           </select>
         </div>
 

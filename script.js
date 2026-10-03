@@ -264,20 +264,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const recommendationText = document.getElementById('recommendationText');
-  function updateCalcRecommendation() {
-    if (!recommendationText || !levelSelect) return;
-    const level = levelSelect.value;
+  const calcTrialPriceEl = document.getElementById('calcTrialPrice');
+  const calcMainPriceEl = document.getElementById('calcMainPrice');
 
-    if (level.includes('9 класс')) {
-      recommendationText.textContent = `2 занятия в неделю по 60 мин (упор на практику ОГЭ)`;
-    } else if (level.includes('Программирование')) {
-      recommendationText.textContent = `1–2 занятия в неделю (Python, проекты, игры)`;
-    } else if (level.includes('5-8')) {
-      recommendationText.textContent = `1–2 занятия в неделю (школьная программа, устранение пробелов)`;
-    } else {
-      recommendationText.textContent = `Индивидуальный график по запросу`;
+  function updateCalcRecommendation() {
+    if (!levelSelect) return;
+    const level = levelSelect.value;
+    const isOffline = selectedFormat.toLowerCase().includes('челябинск') || selectedFormat.toLowerCase().includes('выезд');
+
+    let trialPrice = isOffline ? '800 ₽' : '600 ₽';
+    let mainPrice = isOffline ? '1 500 ₽' : '1 200 ₽';
+    let recommendation = '1–2 занятия в неделю';
+
+    if (level.includes('5-8')) {
+      mainPrice = isOffline ? '1 500 ₽' : '1 200 ₽';
+      recommendation = '1–2 занятия в неделю (школьная программа, устранение пробелов)';
+    } else if (level.includes('9 класс') || level.includes('ОГЭ')) {
+      mainPrice = isOffline ? '1 500 ₽' : '1 200 ₽';
+      recommendation = '2 занятия в неделю по 60 мин (упор на практику ОГЭ)';
+    } else if (level.includes('10-11') || level.includes('ЕГЭ')) {
+      mainPrice = isOffline ? '1 800 ₽' : '1 500 ₽';
+      recommendation = '2 занятия в неделю (глубокий разбор КИМ ЕГЭ)';
+    } else if (level.includes('Python') || level.includes('IT') || level.includes('Программирование') || selectedSubject.includes('IT')) {
+      mainPrice = isOffline ? '1 700 ₽' : '1 400 ₽';
+      recommendation = '1–2 занятия в неделю (Python, проекты, сайты, игры)';
+    } else if (level.includes('Студент') || level.includes('ВУЗ') || level.includes('работа')) {
+      trialPrice = 'от 800 ₽';
+      mainPrice = 'от 800 ₽';
+      recommendation = 'Индивидуальный срок и расчет по сложности ТЗ';
     }
+
+    if (calcTrialPriceEl) calcTrialPriceEl.textContent = trialPrice;
+    if (calcMainPriceEl) calcMainPriceEl.textContent = mainPrice;
+    if (recommendationText) recommendationText.textContent = recommendation;
   }
+
+  // Первичный расчет при загрузке
+  updateCalcRecommendation();
 
   const calcBookBtn = document.getElementById('calcBookBtn');
   if (calcBookBtn) {
