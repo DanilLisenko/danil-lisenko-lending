@@ -3051,3 +3051,21 @@ ul {
     right: 20px;
   }
 }
+
+/* ==========================================================================
+   ПРИНУДИТЕЛЬНОЕ СКРЫТИЕ БЕЙДЖА / ДРОЕРА NETLIFY (POWERED BY NETLIFY)
+   ========================================================================== */
+#netlify-drawer,
+#netlify-drawer-root,
+.netlify-drawer-root,
+[data-netlify-deploy-preview],
+[data-testid="deploy-preview-pill"],
+[class*="netlify-drawer"],
+iframe[src*="netlify"],
+iframe[title*="Netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -99999 !important;
+}

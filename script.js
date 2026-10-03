@@ -483,4 +483,25 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => el.classList.add('visible'));
   }
 
+  /* ==========================================================================
+     11. АВТОМАТИЧЕСКОЕ УДАЛЕНИЕ СЕРВИСНОГО ВИДЖЕТА NETLIFY
+     ========================================================================== */
+  const removeNetlifyWidget = () => {
+    const selectors = [
+      '#netlify-drawer',
+      '#netlify-drawer-root',
+      '.netlify-drawer-root',
+      '[data-netlify-deploy-preview]',
+      '[data-testid="deploy-preview-pill"]',
+      'iframe[src*="netlify"]',
+      'iframe[title*="Netlify"]'
+    ];
+    document.querySelectorAll(selectors.join(',')).forEach(el => el.remove());
+  };
+  removeNetlifyWidget();
+  try {
+    const netlifyWatcher = new MutationObserver(removeNetlifyWidget);
+    netlifyWatcher.observe(document.documentElement, { childList: true, subtree: true });
+  } catch (err) {}
+
 });
